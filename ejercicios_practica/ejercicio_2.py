@@ -26,7 +26,7 @@ if __name__ == '__main__':
 
     # Su implementación ya está disponible, es la siguiente:
     x = list(np.linspace(-4, 4, 20))
-
+    
     y1 = []
     for i in x:
         y1.append(i**2)
@@ -37,13 +37,22 @@ if __name__ == '__main__':
 
     # Alumno: Realizar un gráfico que representen las dos funciones
     # Para ello se debe llamar dos veces a "plot" con el mismo "ax"
-
     # Se debe colocar en la leyenda la función que representa
     # cada función
-
     # Cada función dibujarla con un color distinto
     # a su elección
-
     # Crear acá su gráfico
+
+    fig = plt.figure()
+    fig.suptitle('Grafico ejercicio 2 MPL', fontsize=12)
+    ax = fig.add_subplot()
+
+    ax.plot(x,y1, c='blue', label='y=x**2')
+    ax.plot(x,y2, c='green', label='y=x**3')
+
+    ax.legend()
+    ax.grid()
+    plt.show()
+
 
     print("terminamos")

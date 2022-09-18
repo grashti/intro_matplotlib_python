@@ -8,6 +8,8 @@
 # que aparecen en verde con el hashtag "#"
 
 # Ejercicios de matplotlib
+from telnetlib import X3PAD
+from turtle import color
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -21,17 +23,30 @@ if __name__ == '__main__':
     # Se desea graficar la función tanh para el siguiente
     # intervalor de valores de "X"
     x = np.arange(-np.pi, np.pi, 0.1)
-
+    
     # Función y = tanh(x) --> tangente hiperbólica
     y = np.tanh(x)
 
     # Alumno: Graficar la función utilizando "scatter"
     # utilizando "x" e "y" ya disponible
-
     # Colocar la leyenda y el label con el nombre de la función
-
     # Elegir un marker a elección
-
     # Crear acá su gráfico
+    
+    fig = plt.figure()
+    fig.suptitle('Grafico ejercicio 3 MPL', fontsize=12)
+    ax = fig.add_subplot()
+
+    ax.scatter(x,y, color='black', label='y=x**2', marker='*')
+    ax.legend()
+    ax.grid()
+    plt.show()
+
+
+
+
+
+
+
 
     print("terminamos")
